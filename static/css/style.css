@@ -1,0 +1,11 @@
+h1{
+    text-transform: uppercase;
+    font-family: 'Nunito', sans-serif;
+}
+
+footer{
+    color:#ffffff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 4.5rem
+}

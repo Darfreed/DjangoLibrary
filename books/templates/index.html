@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="row">
+        {% for book in books %}
+        <div class="col-sm-4 text-center">
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h4 class="card-title">{{ book.title }}</h4>
+                            <p class="card-author"><strong>{% for author in book.author.all %}{{ author.name }} {% endfor %}</strong></p>
+                            <p class="card-text"><strong>Žánr:</strong> 
+                            {% for genre in book.genres.all %}{{ genre.name }} {% endfor %}</p>
+                            <p><strong>Hodnocení:</strong> {{ book.rate }}/5</p>
+                            <a href="#" class="btn btn-warning">Podrobnosti</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        {% if book.cover %}
+                        <img class="card-img-top" src="{{ book.cover.url }}" alt="{{ book.title }}">
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <strong>Celkový počet knih:</strong> {{ num_books }}
+        </div>
+    </div>
+{% endblock %}
