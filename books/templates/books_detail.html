@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Detail knihy{% endblock %}
+{% block content %}
+    <div class="bg-warning">
+        <h2 class="uppercase text-center">{{ book.title }}</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="card-body">
+                {% for author in book.author.all %}
+                <h4 class="card-author"><strong>{{ author.name }} </strong></h4>
+                {% endfor %}
+                <p class="card-text"><strong>Žánr:</strong>{% for genre in book.genres.all %} {{ genre.name }} {% endfor %}</p>
+                <p><strong>Hodnocení:</strong> {{ book.rate }}/5</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            {% if book.cover %}
+            <img class="card-img-top" src="{{ book.cover.url }}" alt="{{ book.title }}">
+            {% endif %}
+        </div>
+    </div>
+    <p>{{ book.plot }}</p>
+{% endblock %}

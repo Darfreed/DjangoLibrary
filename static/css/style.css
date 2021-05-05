@@ -1,6 +1,7 @@
 h1{
     text-transform: uppercase;
     font-family: 'Nunito', sans-serif;
+    color:#ffffff;
 }
 
 h2{
@@ -26,6 +27,18 @@ h3{
 
 .authors h3{
     color:#000000;
+    padding: 2rem;
+    border: 3px solid #ffffff;
+}
+
+.authors h3:hover{
+    color:#000000;
+    border: 3px solid #000000;
+    border-radius: 1rem !important;
+}
+
+.card-author{
+    margin: 0 !important;
 }
 
 .navbar{
@@ -60,5 +73,5 @@ footer{
 }
 
 a{
-    color:#ffffff;
+    color:#ffffff !important;
 }

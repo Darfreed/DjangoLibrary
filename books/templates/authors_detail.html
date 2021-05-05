@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Detail spisovatele{% endblock %}
+{% block content %}
+    <div class="bg-warning">
+        <h2 class="uppercase text-center">{{ author.name }}</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="card-body">
+                <p>{{ author.bio }}</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            {% if author.portrait %}
+            <img src="{{ author.portrait.url }}" alt="{{ book.title }}">
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
