@@ -3,9 +3,62 @@ h1{
     font-family: 'Nunito', sans-serif;
 }
 
+h2{
+    font-family: 'Nunito', sans-serif;
+    
+}
+
+div h2{
+    padding: 1rem;
+    border-radius: 1rem !important;
+    margin-bottom: 1rem;
+}
+
+.card{
+    margin-bottom: 1rem;
+}
+
+h3{
+    font-family: 'Nunito', sans-serif;
+    color:#ffffff;
+    text-decoration: none;
+}
+
+.authors h3{
+    color:#000000;
+}
+
+.navbar{
+    margin-bottom: 1rem;
+}
+
+.navbar a {
+    display: block;
+    color: #ffffff;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background: #ffc107;
+    color: black;
+    border-radius: 1rem !important;
+    text-decoration: none;
+}
+
 footer{
     color:#ffffff;
     text-align: center;
     padding: 1rem;
     margin-top: 4.5rem
+}
+
+.jumbotron{
+    margin-bottom: 0 !important;
+    border-radius: 0 !important;
+}
+
+a{
+    color:#ffffff;
 }
