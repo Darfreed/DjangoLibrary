@@ -41,9 +41,9 @@ class AuthorView(TemplateView):
 class BookDetailView(TemplateView):
     model = Book
     context_object_name = 'book'
-    template_name = '../templates/books_detail.html'
+    template_name = 'books_detail.html'
 
 class AuthorDetailView(TemplateView):
     model = Author
     context_object_name = 'author'
-    template_name = '../templates/authors_detail.html'
+    template_name = 'authors_detail.html'

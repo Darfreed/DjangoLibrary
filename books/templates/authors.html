@@ -8,7 +8,7 @@
     <div class="row">
         {% for author in authors %}
         <div class="col-sm-4 text-center authors">
-            <a href="../author_detail/{{ author.id }}"><h3>{{author.name}}</h3></a>
+            <a href="../author_detail/{{ author.pk }}"><h3>{{author.name}}</h3></a>
         </div>
         {% endfor %}
     </div>

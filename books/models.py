@@ -30,6 +30,10 @@ class Author(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse("detail", args=[str(self.id)])
+
+
 class Book(models.Model):
     title = models.CharField(max_length=200, verbose_name="Title")
     author = models.ManyToManyField(Author, help_text='Select author of this book')
@@ -54,7 +58,7 @@ class Book(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('book-detail', args=[str(self.id)])
+        return reverse('detail', args=[str(self.id)])
 
 
 
